@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Datasheet - EC 6UN</title>
+<style>
+@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/Poppins-Regular.ttf') format('truetype')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url('../fonts/Poppins-Bold.ttf') format('truetype')}
+:root{
+  --ink:#0a1a2f; --navy:#0f2a4a; --blue:#1d5fae; --cyan:#19b4e6;
+  --mute:#5b6a80; --line:#e1e7ef; --wash:#f4f7fb; --paper:#e9e6df;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Poppins','Segoe UI',system-ui,Arial,sans-serif;font-size:12px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.ctrl{position:sticky;top:0;z-index:10;background:var(--ink);color:#fff;padding:10px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px}
+.ctrl .badge{background:var(--cyan);color:var(--ink);font-weight:700;font-size:11px;padding:4px 10px;border-radius:999px;letter-spacing:.04em}
+.ctrl button{border:0;background:var(--cyan);color:var(--ink);font:700 13px/1 'Poppins',sans-serif;padding:10px 18px;border-radius:999px;cursor:pointer}
+.stage{padding:28px 16px 60px;display:flex;justify-content:center}
+
+.page{width:210mm;height:297mm;background:#fff;position:relative;overflow:hidden;box-shadow:0 12px 40px rgba(10,26,47,.18);display:flex;flex-direction:column}
+
+/* Sol yan şerit + logo */
+.rail{position:absolute;left:0;top:0;bottom:0;width:13mm;background:var(--navy)}
+.rail::after{content:"";position:absolute;right:0;top:0;bottom:0;width:2px;background:var(--cyan)}
+.rail-logo{position:absolute;left:50%;top:50%;width:56mm;transform:translate(-50%,-50%) rotate(-90deg)}
+
+.main{margin-left:13mm;padding:12mm 15mm 0 15mm;flex:1;display:flex;flex-direction:column;gap:7mm}
+
+/* Başlık */
+.head{display:flex;justify-content:space-between;align-items:flex-start;gap:10mm;padding-bottom:5mm;border-bottom:1px solid var(--line)}
+.kicker{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
+.title{font-size:30px;font-weight:700;letter-spacing:-.02em;line-height:1.05;margin:2mm 0 1mm}
+.cat{font-size:12.5px;color:var(--mute)}
+
+/* Sağ üst kimlik kutusu: marka + stok kodu */
+.ids{display:flex;gap:3mm;align-items:stretch}
+.idbox{border:1px solid var(--line);border-radius:6px;padding:2.4mm 3.6mm;min-width:30mm}
+.idbox small{display:block;font-size:8.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:1mm}
+.idbox b{display:block;font-size:14px;font-weight:700;letter-spacing:.02em;color:var(--ink);white-space:nowrap}
+.idbox.brand{background:var(--navy);border-color:var(--navy)}
+.idbox.brand small{color:#9fb6d1}
+.idbox.brand b{color:#fff;letter-spacing:.14em}
+.idbox.code{border-left:3px solid var(--cyan)}
+.idbox.code b{font-size:17px;font-variant-numeric:tabular-nums;color:var(--navy)}
+
+/* Görsel + öne çıkanlar */
+.hero{display:block}
+.visual{background:#fff;border:1px solid var(--line);border-radius:8px;padding:8mm;height:90mm;display:flex}
+.visual-in{flex:1;display:flex;align-items:center;justify-content:center}
+.visual img{max-width:100%;max-height:80mm;object-fit:contain}
+.hl h3,.sec h3{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin:0 0 3mm}
+.hl ol{list-style:none;margin:0;padding:0}
+.hl li{display:grid;grid-template-columns:6mm 1fr;align-items:start;padding:3mm 0;border-bottom:1px solid var(--line);font-size:12px;font-weight:500;color:var(--ink)}
+.hl li:first-child{padding-top:0}
+.hl li:last-child{border-bottom:0}
+.hl li::before{content:"";width:2mm;height:2mm;border-radius:50%;background:var(--cyan);margin-top:1.6mm}
+
+/* Anahtar değerler */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.stat{padding:4mm 4mm 4.2mm;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat small{display:block;font-size:9.5px;text-transform:uppercase;letter-spacing:.12em;color:var(--mute)}
+.stat b{display:block;font-size:15px;margin-top:1mm;color:var(--navy);font-weight:700}
+
+/* Tablo */
+.spec{width:100%;border-collapse:collapse}
+.spec th,.spec td{padding:3mm 4mm;text-align:left;border-bottom:1px solid var(--line);font-size:12px}
+.spec th{width:34%;color:var(--mute);font-weight:600;background:var(--wash)}
+.spec td{font-weight:500}
+.spec tr:last-child th,.spec tr:last-child td{border-bottom:0}
+
+.box{border:1px solid var(--line);border-radius:6px;padding:4.5mm 5mm}
+.box ul{margin:0;padding:0;list-style:none}
+.box ul.dots li{display:grid;grid-template-columns:6mm 1fr;align-items:start}
+.box ul.dots li::before{content:"";width:2mm;height:2mm;border-radius:50%;background:var(--cyan);margin-top:1.6mm}
+.box li{margin-bottom:1.5mm;font-size:12px}
+
+/* Alt bilgi */
+.foot{margin-top:auto;border-top:3px solid var(--cyan);padding:3.5mm 0 8mm 0;display:flex;justify-content:space-between;align-items:center;font-size:10px;color:var(--mute)}
+.foot b{color:var(--ink);font-weight:700;letter-spacing:.04em}
+
+@media print{
+  @page{size:A4 portrait;margin:0}
+  body{background:#fff}
+  .ctrl{display:none!important}
+  .stage{padding:0;display:block}
+  .page{box-shadow:none;width:210mm;height:297mm}
+}
+
+.dots{list-style:none;margin:0;padding:0}
+.dots li{position:relative;padding:1.8mm 0 1.8mm 7mm;border-bottom:1px solid var(--line);font-size:12.5px;line-height:1.5}
+.dots li:last-child{border-bottom:0}
+.dots li::before{content:"";position:absolute;left:1mm;top:3.3mm;width:2.2mm;height:2.2mm;border-radius:50%;background:var(--cyan)}
+
+.spec{width:100%;border-collapse:collapse}
+.spec th,.spec td{padding:2.2mm 4mm;text-align:left;border-bottom:1px solid var(--line);font-size:12px}
+.spec th{background:var(--navy);color:#fff;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;border-bottom:0}
+.spec td.one{font-weight:500}
+.spec tr:last-child td{border-bottom:0}
+
+.page{padding:0}
+.visual{height:92mm}
+.visual.sm{height:74mm}
+.visual-in{height:100%}
+.visual img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.visual img.lowres{max-height:62%;max-width:72%}
+.dots li{padding:1.5mm 0 1.5mm 7mm;font-size:12px}
+.dots.compact li{padding:1mm 0 1mm 7mm;font-size:11.5px}
+.spec td.one{font-weight:500}
+.spec.acc td.one{position:relative;padding-left:7mm}
+.spec.acc td.one::before{content:"";position:absolute;left:1mm;top:50%;margin-top:-1.1mm;width:2.2mm;height:2.2mm;border-radius:50%;background:var(--cyan)}
+.spec{border-top:1px solid var(--line)}
+.spec tr:last-child th,.spec tr:last-child td{border-bottom:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="stage">
+<article class="page">
+  <div class="rail"><img class="rail-logo" src="../img/logo_white_hd.png" alt="Mikafon"></div>
+  <div class="main">
+    <header class="head">
+      <div>
+        <div class="kicker">Mikser ve Mikser Amplifikatörler</div>
+        <h1 class="title">EC 6UN</h1>
+        <div class="cat">Analog Mikser</div>
+      </div>
+      <div class="ids">
+        <div class="idbox brand"><small>Marka</small><b>SPEKON</b></div>
+        <div class="idbox code"><small>Stok Kodu</small><b>16010185</b></div>
+      </div>
+    </header>
+    <section class="hero"><div class="visual"><div class="visual-in"><img class="" src="../img/g02_024.jpg" alt="EC 6UN"></div></div></section>
+    <section class="sec"><h3>Teknik Özellikler</h3><ul class="dots"><li>4 Kanallı plastik gövdeli mikser</li><li>4 Mono + 2 stereo giriş</li><li>+48 Phantom</li><li>BT / MP3</li><li>Reverb</li></ul></section>
+    
+    <footer class="foot">
+      <span><b>Mikafon</b> &nbsp;·&nbsp; Teknik Föy</span>
+      <span><b>mikafon.com.tr</b></span>
+    </footer>
+  </div>
+</article>
+</div>
+</body>
+</html>
