@@ -1679,5 +1679,45 @@
     "model": "MX16",
     "file": "12030174.pdf",
     "ticari_ad": "16 Channel, 1U, Analog Mixer"
+  },
+  "16050190": {
+    "model": "M-1010",
+    "file": "16050190.pdf",
+    "ticari_ad": "8 Girişli UHF aktif 2 adet antenli menzil arttırıcı set"
+  },
+  "16082596": {
+    "model": "VCL-701",
+    "file": "16082596.pdf",
+    "ticari_ad": "VCL-701"
+  },
+  "41183250": {
+    "model": "DUO A1",
+    "file": "41183250.pdf",
+    "ticari_ad": "İkili Kondenser Mk."
+  },
+  "41183260": {
+    "model": "M-85",
+    "file": "41183260.pdf",
+    "ticari_ad": "Vokal Mikrofon"
+  },
+  "12030545": {
+    "model": "ZM10",
+    "file": "12030545.pdf",
+    "ticari_ad": "Anons Konsolu"
+  },
+  "12030547": {
+    "model": "PA20",
+    "file": "12030547.pdf",
+    "ticari_ad": "PA20"
+  },
+  "12030548": {
+    "model": "PA30",
+    "file": "12030548.pdf",
+    "ticari_ad": "Anons Konsolu"
+  },
+  "12030549": {
+    "model": "PA40",
+    "file": "12030549.pdf",
+    "ticari_ad": "PA40"
   }
 }
