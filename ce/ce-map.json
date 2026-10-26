@@ -1578,5 +1578,101 @@
   "model": "KEY E1",
   "file": "32010180.pdf",
   "ticari_ad": "KEY-E1"
+ },
+ "12020208": {
+  "model": "DR3051",
+  "file": "12020208.pdf",
+  "ticari_ad": "DR3051",
+  "kaynak": "MİKAFON/DR3050 & DR3051 & DR6050 & DR6051 CE.pdf"
+ },
+ "39040761": {
+  "model": "PAS6-B",
+  "file": "39040761.pdf",
+  "ticari_ad": "PAS 6",
+  "kaynak": "STUDIOMASTER/PAS 6 CE.pdf"
+ },
+ "17010670": {
+  "model": "P6ST/3.5STP",
+  "file": "17010670.pdf",
+  "ticari_ad": "P6ST",
+  "kaynak": "PURECON/P6ST CE.pdf"
+ },
+ "17071990": {
+  "model": "CAT6 RJ45",
+  "file": "17071990.pdf",
+  "ticari_ad": "CAT6",
+  "kaynak": "PURECON/CAT6 CE.pdf"
+ },
+ "15950385": {
+  "model": "ESCO/DOC 16S",
+  "file": "15950385.pdf",
+  "ticari_ad": "",
+  "kaynak": "ENORMPA/DOC-S CE.pdf"
+ },
+ "15950450": {
+  "model": "ESCO/D4250IP PA.2x260W",
+  "file": "15950450.pdf",
+  "ticari_ad": "",
+  "kaynak": "ENORMPA/D4250-IP-2x250W CE.pdf"
+ },
+ "15950451": {
+  "model": "ESCO/D4250IP PA.4x250W",
+  "file": "15950451.pdf",
+  "ticari_ad": "",
+  "kaynak": "ENORMPA/D4250-IP-4 X250W CE.pdf"
+ },
+ "17010500": {
+  "model": "ACOUNT",
+  "file": "17010500.pdf",
+  "ticari_ad": "",
+  "kaynak": "PURECON/ACOUT CE.pdf"
+ },
+ "17072000": {
+  "model": "PC-XLR M/ XLR F",
+  "file": "17072000.pdf",
+  "ticari_ad": "",
+  "kaynak": "PURECON/PC-MIC- XMXF_1 CE.pdf"
+ },
+ "17072020": {
+  "model": "PC-XLR M/ XLR F",
+  "file": "17072020.pdf",
+  "ticari_ad": "",
+  "kaynak": "PURECON/PC-MIC- XMXF_3 CE.pdf"
+ },
+ "17072030": {
+  "model": "M/ XLR F",
+  "file": "17072030.pdf",
+  "ticari_ad": "",
+  "kaynak": "PURECON/PC-MIC- XMXF_5 CE.pdf"
+ },
+ "17072040": {
+  "model": "PC-XLR M/ XLR F",
+  "file": "17072040.pdf",
+  "ticari_ad": "",
+  "kaynak": "PURECON/PC-MIC- XMXF_10 CE.pdf"
+ },
+ "17072060": {
+  "model": "PC-XLR M/ XLR F",
+  "file": "17072060.pdf",
+  "ticari_ad": "",
+  "kaynak": "PURECON/PC-MIC- XMXF_15 CE.pdf"
+ },
+ "17072440": {
+  "model": "PC-2XF-2J6M/3",
+  "file": "17072440.pdf",
+  "ticari_ad": "",
+  "kaynak": "PURECON/PC-2XF- 2JM6_3 CE.pdf"
+ },
+ "17072550": {
+  "model": "PC-2xRCA",
+  "file": "17072550.pdf",
+  "ticari_ad": "",
+  "kaynak": "PURECON/PC-2RCA_3 CE.pdf"
+ },
+ "47310100": {
+  "model": "STAGE22 HF B",
+  "file": "47310100.pdf",
+  "ticari_ad": "",
+  "kaynak": "SOMMER CABLE/STAGE 22 HF CE.pdf"
  }
 }
