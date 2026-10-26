@@ -1719,5 +1719,15 @@
     "model": "PA40",
     "file": "12030549.pdf",
     "ticari_ad": "PA40"
+  },
+  "12020200": {
+    "model": "DR6051",
+    "file": "12020200.pdf",
+    "ticari_ad": "Class-D Reverb Mixer Amplifier, 2x270W"
+  },
+  "12020202": {
+    "model": "DR6050",
+    "file": "12020202.pdf",
+    "ticari_ad": "Class-D Reverb Mixer Amplifier, 2x270W"
   }
 }
